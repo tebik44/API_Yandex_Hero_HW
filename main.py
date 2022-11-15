@@ -1,6 +1,6 @@
 import requests
 from pprint import pprint
-import os
+from Settings import TOKEN
 
 # Задание 1 --->
 def most_intelligence_hero(names):
@@ -57,7 +57,6 @@ class YaUploader:
 if __name__ == '__main__':
     # most_intelligence_hero(['Hulk', 'Captain America', 'Thanos'])
     path_to_file = 'cats.png'
-    token = 'y0_AgAAAAArqShkAADLWwAAAADUCEKCV9gR-WOAQA2ZoKwhzwNuUu_qyEk'
-    uploader = YaUploader(token)
+    uploader = YaUploader(TOKEN)
     uploader.POST_upload_local_file_to_disk(path_to_file, '/first_test.png')
 
